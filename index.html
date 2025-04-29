@@ -41,7 +41,7 @@
       box-shadow: 0 0 15px rgb(164, 208, 255);
       object-fit: cover;
       /* prevents stretching */
-      padding: 20px;
+      padding: 25px;
       /* add space between image and border */
       background-color: black;
       /* background color inside the circle */
@@ -176,6 +176,79 @@
       }
 
     }
+
+
+    @media (max-width: 900px) {
+
+      /* Profile Picture */
+      .profile-pic {
+        border-radius: 50%;
+        width: 500 px;
+        /* Adjusted size for tablet */
+        height: 500 px;
+        object-fit: cover;
+        border: 3px solid rgb(164, 208, 255);
+        /* Pink border */
+        box-shadow: 0 0 15px rgb(164, 208, 255);
+        padding: 25px;
+        /* Slightly reduced padding */
+        margin-bottom: 20px;
+        /* Reduced bottom margin for better spacing */
+      }
+
+      /* Universal Margin Reset for Auto Centering */
+      * {
+        margin: 0 auto;
+      }
+
+      /* About Me Image */
+      .profile-pic {
+        border-radius: 50%;
+        width: 350px;
+        /* Adjusted size */
+        height: 350px;
+        object-fit: cover;
+        border: 3px solid rgb(140, 172, 206);
+        /* Pink border */
+        box-shadow: 0 0 15px rgb(164, 208, 255);
+        padding: 25px;
+        /* Slightly reduced padding */
+      }
+
+      /* About Me Text */
+      .profile-text {
+        margin-top: 20px;
+        font-size: 15px;
+        /* Adjusted font size for better readability */
+      }
+
+      /* General Layout Adjustments */
+      .container {
+        padding-top: 60px;
+        /* Adjusted padding for smaller screens */
+      }
+
+      /* Button Styles */
+      .cta-btn,
+      .mail-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      /* Navbar Text */
+      .navbar-nav {
+        font-size: 14px;
+        /* Adjusted font size for tablet */
+      }
+
+      /* Columns Layout in Projects Section */
+      .col-md-4 {
+        width: 100%;
+        /* Make each project section full-width */
+        margin-bottom: 20px;
+        /* Add spacing between sections */
+      }
+    }
   </style>
 </head>
 
@@ -217,7 +290,7 @@
       <div class="col-sm-6 text-center">
         <img src="Pic1.jpg" class="profile-pic" alt="Profile Picture">
       </div>
-      <div class="col-sm-6 text-light ">
+      <div class=" profile-text col-sm-6 text-light ">
         <h1>Hi, I'm Khushi Nigam 👋</h1>
         <p style="color: white; font-size: 18px;">
           I'm a BCA Graduate Passionate Data Analytics and Business Intelligence. I love turning raw data into

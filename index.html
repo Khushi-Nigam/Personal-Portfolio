@@ -28,7 +28,7 @@
     }
 
     body {
-      background-color: black;
+      background-color: #000;
       color: white;
       margin: 0;
       padding: 0;
@@ -366,6 +366,90 @@
     .nav-link.active::after {
       width: 100%;
     }
+
+    .achievement-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    .card-text {
+      flex-grow: 1;
+    }
+
+    .card-text {
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      /* Same font size for all titles */
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .card-subtitle {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      background-color: #1e1e2f;
+      padding-top: 60px;
+      transition: 0.3s ease-in-out;
+      box-shadow: 2px 0 12px rgba(0, 0, 0, 0.4);
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
+    .sidebar a {
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      color: #f1f1f1;
+      display: block;
+      transition: 0.2s;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar a:hover {
+      background-color: #333358;
+      color: #ffcc70;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #ff6f61;
+    }
   </style>
 </head>
 
@@ -414,15 +498,14 @@
           </div>
         </div>
       </nav>
-
-      <!-- Sidebar nav for mobile only -->
+      <!-- mobile Sidebar only -->
       <div id="mobileSidebar" class="sidebar">
         <button class="close-btn" id="closeSidebar">&times;</button>
-        <a href="#home">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#certificates">Certifications</a>
+        <a href="#home">🏠 Home</a>
+        <a href="#about">👩‍💼 About Me</a>
+        <a href="#projects">💻 Projects</a>
+        <a href="#achievements">🏆 Achievements</a>
+        <a href="#certificates">📜 Certifications</a>
       </div>
 
 
@@ -451,152 +534,6 @@
       </div>
     </div>
   </section>
-  <section id="projects">
-    <div class="row mt-5 ">
-      <h2 class="text-center text-light">Projects</h2>
-      <div style="width: 100%; display: flex; justify-content: center;">
-        <div style="
-            margin-top: 10px;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(to right, #04a447, #04a447);
-            border-radius: 5px;
-          "></div>
-      </div>
-      <p class="text-center text-white mb-4 mt-4">Here are some of my projects. These projects reflect my journey and
-        learning in frontend development, machine learning, and data analytics. Each one helped me build practical
-        skills and solve real-world problems using technology.
-      </p>
-
-      <!-- SQL PROject -->
-      <div class="col-12 col-md-4 mb-3">
-        <div class="card">
-          <img src="SQL.png" class="card-img-top" alt="Power BI Dashboard 1">
-          <div class="card-body">
-            <h5 class="card-title">SQL Project</h5>
-            <p class="card-text">The main goal of this project is to apply SQL skills to a real-world dataset and
-              derive
-              actionable insights that can help improve business decisions. <br> <br>The analysis is structured into
-              three levels: Basic, Intermediate, and Advanced SQL queries.
-
-            </p>
-            <a href="https://github.com/Khushi-Nigam/sql_report_pizza_sales" class=" btn-custom card-link">View
-              Project</a>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Power BI Dashboard 2 -->
-      <div class="col-12 col-md-4 mb-3">
-        <div class="card">
-          <img src="Dashboard1.png" class="card-img-top" alt="Power BI Dashboard 2">
-          <div class="card-body">
-            <h5 class="card-title">Domino's Sales Dashboard</h5>
-            <p class="card-text">This dashboard visualizes customer data, enabling analysis of customer behavior,
-              demographics, and satisfaction levels. <br><br>Key features include heat maps, geographical
-              distribution,
-              and
-              detailed performance analysis over different time periods.</p>
-            <a href="https://github.com/Khushi-Nigam/Domino-s-Sales-Dashboard" class=" btn-custom card-link">View
-              Project</a>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Excel Report 1 -->
-      <div class="col-12 col-md-4 mb-3">
-        <div class="card">
-          <img src="project1.png" class="card-img-top" alt="Excel Report 1">
-          <div class="card-body">
-            <h5 class="card-title">Job Portal Project Using Django</h5>
-            <p class="card-text">This Project is a dynamic web application designed to bridge the gap between job
-              seekers and employers. It provides a user-friendly platform where candidates can apply for jobs, while
-              recruiters can post job, manage applications, and find the right talent.
-              <br> Technologies Used:
-              Frontend: HTML, CSS, JavaScript,Bootstrap <br>
-              Backend: Python Django.
-            </p>
-            <a href="https://github.com/Khushi-Nigam/jobportal" class=" btn-custom card-link">View Project</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <section id="achievements">
-    <div class="row pt-5">
-      <h2 class="text-center mb-3" style="color: white;">My Achievements</h2>
-      <div style="width: 100%; display: flex; justify-content: center;">
-        <div style="
-            margin-top: 10px;
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(to right, #a40489, #a40489);
-            border-radius: 5px;
-          "></div>
-      </div>
-      <div class="row">
-        <!-- Each column -->
-        <div class="col-md-3 d-flex mt-5">
-          <div class="card achievement-card h-100 w-100">
-            <img src="cert2.png" class="card-img-top" alt="GSSoC">
-            <div class="card-body">
-              <h5 class="card-title">🥇 GSSoC Contributor</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Contributed to open-source projects during GSSoC</h6>
-              <p class="card-text">
-                Actively participated in GirlScript Summer of Code (GSSoC). This experience helped sharpen my GitHub
-                collaboration and problem-solving skills while giving back to the developer community.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 d-flex mt-5">
-          <div class="card achievement-card h-100 w-100">
-            <img src="gssoc.jpg" class="card-img-top" alt="Top Campus Ambassador">
-            <div class="card-body">
-              <h5 class="card-title">🌟 Top Campus Ambassador</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Recognized for outstanding campus engagement during GSSoC</h6>
-              <p class="card-text">
-                Developed strong teamwork and leadership skills by organizing events, coordinating with fellow
-                ambassadors, and encouraging student participation in GSSoC.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 d-flex mt-5">
-          <div class="card achievement-card h-100 w-100">
-            <img src="google.jpg" class="card-img-top" alt="Google Arcade">
-            <div class="card-body">
-              <h5 class="card-title">Google Cloud Arcade 2024</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Achieved recognition in Google Arcade</h6>
-              <p class="card-text">
-                I participated in the Google Arcade Challenge and earned skill badges boosting cloud skills. Received
-                recognition from Google for my performance.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 d-flex mt-5">
-          <div class="card achievement-card h-100 w-100">
-            <img src="event.jpg" class="card-img-top" alt="GDG Event">
-            <div class="card-body">
-              <h5 class="card-title">🤝 Attended GDG Events</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Participated in Google Developer Group (GDG) community events
-              </h6>
-              <p class="card-text">
-                Attended multiple GDG-hosted sessions and workshops. Gained insights into real-world applications of
-                machine learning and connected with industry experts.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
   <section id="about">
     <div class="row">
       <div class="container about-me-section fadeInUp">
@@ -610,10 +547,10 @@
               border-radius: 5px;
             "></div>
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center pt-5">
           <div class="col-md-4 text-center">
             <!-- Profile Image -->
-            <img src="pic2.jpg" alt="Profile Image" class="about-me-image">
+            <img src="pic2.jpg" alt="Profile Image" class="about-me-image ">
           </div>
           <div class="col-md-8">
             <div class="about-me-text">
@@ -645,6 +582,233 @@
       </div>
     </div>
   </section>
+  <section id="projects">
+    <div class="row mt-5 ">
+      <h2 class="text-center text-light">Projects</h2>
+      <div style="width: 100%; display: flex; justify-content: center;">
+        <div style="
+            margin-top: 10px;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #04a447, #04a447);
+            border-radius: 5px;
+          "></div>
+      </div>
+      <p class="text-center text-white mb-4 mt-4">Here are some of my projects. These projects reflect my journey and
+        learning in frontend development, machine learning, and data analytics. Each one helped me build practical
+        skills and solve real-world problems using technology.
+      </p>
+
+      <!-- SQL PROject -->
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+          <img src="SQL.png" class="card-img-top" alt="Power BI Dashboard 1">
+          <div class="card-body">
+            <h5 class="card-title text-center">SQL Pizza Sales Analysis</h5>
+            <h6 class="card-subtitle mb-2 text-muted">MySQL Workbench • SQL</h6>
+            <p class="card-text">
+              Performed SQL queries on pizza sales data to uncover trends, using MySQL Workbench to aggregate and filter
+              data by product, region, and time.
+            </p>
+            <a href="#modalSQLPizzaSales" class="btn btn-primary" data-bs-toggle="modal">View Case Study</a>
+
+          </div>
+        </div>
+      </div>
+      <!-- Modal for SQL Pizza Sales Project -->
+      <div class="modal fade" style="color: #000;" id="modalSQLPizzaSales" tabindex="-1"
+        aria-labelledby="sqlPizzaSalesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="sqlPizzaSalesModalLabel">SQL Pizza Sales – Case Study</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              <p><strong>🎯 Objective:</strong> Analyze pizza sales data using SQL queries to uncover trends and
+                insights.</p>
+              <p><strong>🛠️ Tools Used:</strong> MySQL Workbench, SQL</p>
+              <p><strong>📊 What I Did:</strong></p>
+              <ul>
+                <li>Performed complex SQL queries to extract and aggregate sales data by product, region, and time</li>
+                <li>Used JOINs, GROUP BY, and filtering techniques to uncover key insights</li>
+                <li>Created views and optimized queries for faster data retrieval</li>
+              </ul>
+              <p><strong>✅ Outcome:</strong> Uncovered key insights regarding product performance, regional trends, and
+                sales patterns, which can be used to improve marketing and inventory decisions.</p>
+              <!-- Add View on GitHub Button -->
+              <a href="https://github.com/your-username/sql-pizza-sales-project" target="_blank"
+                class="btn btn-primary mt-3">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Power BI Dashboard 2 -->
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+          <img src="Dashboard1.png" class="card-img-top" alt="Power BI Dashboard 2">
+          <div class="card-body">
+            <h5 class="card-title text-center">Domino’s Sales Dashboard</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Power BI • Excel • DAX</h6>
+            <p class="card-text">
+              Built an interactive sales dashboard for Domino’s using Power BI, helping visualize product-wise and
+              regional sales trends. Utilized DAX queries.
+            </p>
+            <a href="#modal1" class="btn btn-primary" data-bs-toggle="modal">View Case Study</a>
+            <!-- Modal -->
+            <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="dominoModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="dominoModalLabel">Domino’s Sales Dashboard – Case Study</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-start">
+                    <p><strong>🎯 Objective:</strong> Analyze Domino’s pizza sales data to uncover trends and improve
+                      decision-making.</p>
+                    <p><strong>🛠️ Tools Used:</strong> Power BI, Excel, DAX</p>
+                    <p><strong>📊 What I Did:</strong></p>
+                    <ul>
+                      <li>Cleaned and transformed raw sales data in Power Query</li>
+                      <li>Created KPIs (e.g., Total Revenue, Avg Order Value)</li>
+                      <li>Built visuals for sales by product, region, and time</li>
+                    </ul>
+                    <p><strong>✅ Outcome:</strong> Helped visualize performance trends and identify top-performing
+                      items. Could be used to optimize marketing strategies.</p>
+                    <!-- Add View on GitHub Button -->
+                    <a href="https://github.com/your-username/your-repository" target="_blank"
+                      class="btn btn-primary mt-3">View on GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Full stack -->
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card">
+          <img src="project1.png" class="card-img-top" alt="Excel Report 1">
+          <div class="card-body">
+            <h5 class="card-title text-center">Job Portal Project Using Django</h5>
+            <h6 class="card-subtitle mb-2 text-muted">HTML • CSS • JavaScript • Bootstrap • Python Django</h6>
+            <p class="card-text">
+              Developed a dynamic job portal web application connecting job seekers with employers, allowing candidates
+              to apply for jobs and recruiters to manage applications and post openings.
+            </p>
+            <a href="#modalJobPortal" class="btn btn-primary" data-bs-toggle="modal">View Case Study</a>
+          </div>
+        </div>
+      </div>
+      <!-- Modal for Job Portal Project -->
+      <div class="modal fade" style="color: #000;" id="modalJobPortal" tabindex="-1"
+        aria-labelledby="jobPortalModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="jobPortalModalLabel">Job Portal Project Using Django</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start">
+              <p><strong>🎯 Objective:</strong> Create a dynamic job portal web application to connect job seekers and
+                employers.</p>
+              <p><strong>🛠️ Technologies Used:</strong> Frontend: HTML, CSS, JavaScript, Bootstrap; Backend: Python
+                Django</p>
+              <p><strong>📊 What I Did:</strong></p>
+              <ul>
+                <li>Developed user interfaces for job seekers and recruiters using HTML, CSS, and JavaScript</li>
+                <li>Built dynamic pages for job listings, applications, and management</li>
+                <li>Implemented a backend in Python Django to handle user registration, authentication, and job postings
+                </li>
+              </ul>
+              <p><strong>✅ Outcome:</strong> Created a fully functional platform where job seekers can easily apply for
+                jobs and employers can manage job postings and applications.</p>
+              <!-- Add View on GitHub Button -->
+              <a href="https://github.com/Khushi-Nigam/jobportal" target="_blank" class="btn btn-primary mt-3">View on
+                GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section id="achievements">
+    <div class="row pt-5">
+      <h2 class="text-center mb-3" style="color: white;">My Achievements</h2>
+      <div style="width: 100%; display: flex; justify-content: center;">
+        <div style="
+            margin-top: 10px;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #a40489, #a40489);
+            border-radius: 5px;
+          "></div>
+      </div>
+      <div class="row justify-content-center text-center">
+        <!-- Each column -->
+        <div class="col-md-3 d-flex align-items-stretch mt-5">
+          <div class="card achievement-card h-100 w-100">
+            <img src="cert2.png" class="card-img-top" alt="GSSoC">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">🥇 GSSoC Contributor</h5>
+              <h6 class="card-subtitle text-muted">Contributed to open-source projects during GSSoC</h6>
+              <p class="card-text">
+                Actively participated in GirlScript Summer of Code (GSSoC). This experience helped sharpen my GitHub
+                collaboration and problem-solving skills while giving back to the developer community.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex align-items-stretch mt-5">
+          <div class="card achievement-card h-100 w-100">
+            <img src="gssoc.jpg" class="card-img-top" alt="Top Campus Ambassador">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">🌟 Top Campus Ambassador</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Recognized for outstanding campus engagement during GSSoC</h6>
+              <p class="card-text">
+                Developed strong teamwork and leadership skills by organizing events, coordinating with fellow
+                ambassadors, and encouraging student participation in GSSoC.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex align-items-stretch mt-5">
+          <div class="card achievement-card h-100 w-100">
+            <img src="google.jpg" class="card-img-top" alt="Google Arcade">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">Google Cloud Arcade 2024</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Achieved recognition in Google Arcade</h6>
+              <p class="card-text">
+                I participated in the Google Arcade Challenge and earned skill badges boosting cloud skills. Received
+                recognition from Google for my performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 d-flex align-items-stretch mt-5">
+          <div class="card achievement-card h-100 w-100">
+            <img src="event.jpg" class="card-img-top" alt="GDG Event">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center;">🤝 Attended GDG Events</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Participated in Google Developer Group (GDG) community events
+              </h6>
+              <p class="card-text">
+                Attended multiple GDG-hosted sessions and workshops. Gained insights into real-world applications of
+                machine learning and connected with industry experts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
   <section id="certificates">
     <div class="row pt-5 ">
       <section class="py-5 bg-dark pt-5" id="certifications">
